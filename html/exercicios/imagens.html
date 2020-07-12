@@ -1,0 +1,77 @@
+<div container-imgs>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" width="560px" height='312px'
+            title="Montanhas do além">
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" alt="Gif" title="LOGO DA COD3R" width="460px"
+            height="240px">
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" alt="Imagem formato PNG" width="400px"
+            height='250px'>
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" alt="Avatar" align='left' height="312px"
+            width="513px">
+        Texto oaspoas aosj oasj oajsoasoajs oajsasj oaosjoasoasj oasjoajsoajs oasjoasjoasj
+        oasoajsosaj oasjoasjoasj oasoajsoasj oasjoajsopajs oajsoasjoajs ojasoajsoajs asdasas
+        asd oasaos aosk aok saosk aos kaosk aosk aosk aso aosk aok aosk aok aok saosk aosk aos
+    </p>
+
+
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png" media="(min-width:600px )">
+            <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png'>
+        </picture>
+    </p>
+
+</div>
+<br>
+
+<style>
+    p {
+        display: none;
+        position: absolute;
+    }
+</style>
+
+<script>
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoinicio = inicio - passo
+        if (novoinicio >= fim) {
+            elem.style.left = novoinicio + 'px'
+            setTimeout(() => mover(elem, novoinicio, fim, passo, callback), 7)
+        } else {
+            callback()
+        }
+    }
+    function slider(){
+        const nodelist = document.querySelectorAll('[container-imgs] > p')
+        const slides = Array.from(nodelist)
+        exibirSlide (slides,slides[0])
+    }
+    function exibirSlide(slides, slide){
+        slide.style.display = 'block'
+        const inicio = innerWidth
+        const fim = -slide.clientWidth
+        slide.style.left = `${inicio}px`
+
+        mover(slide,inicio,fim,5,() =>{
+            slide.style.display = 'none'
+            exibirSlide(slides,getProximo(slides,slide))
+        })
+    }
+    function getProximo(lista,atual){
+        const i = lista.indexOf(atual) + 1
+        return i < lista.length ? lista[i] : lista[0]
+    }
+    slider()
+</script>
+
+

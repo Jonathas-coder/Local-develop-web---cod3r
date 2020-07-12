@@ -1,0 +1,86 @@
+document.querySelectorAll('[NOMEDOATTR]')
+gera uma nodelist com todos os atributos instanciados.(tipo array)
+Pra acessa-los basta usar forEach.
+
+element.onclick = function()
+
+onclick � o metodo de clilcar em tal elemento.
+
+<table> </table> � o esqueleto da tabela
+<thead> </thead> � o cabe�alho
+<tr> </tr> table roll � uma linha na tabela.
+
+
+<td>  </td> � table data � um dado na tabela.
+
+tbody tr:hover {quando o mouse passar por cima fa�a algo
+}
+
+Usa-se <th> apenas dentro de um cabe�alho que � o <thead>
+
+Usa-se <td> apenas em <tbody>
+
+Mas lembre-se que as 2 (td e th) tags est�o envolvidas num <tr> table roll, uma linha na tabela.
+
+
+usa-se <td> tamb�m no <tfooter>, que � o rodap�, mas ele fica fora do <tbody> e precisa de <tr> tamb�m pra envolver os <td>
+
+*** <td colspan='3'> colspan=' Ocupa espa�os em linhas na coluna'   rawspan='ocupa espa�o crescendo a tabela'
+
+
+
+================================================Eventos javaScript===========================================
+
+Quando o mouse entra na div = mouseenter
+Quando o mouse se move dentro da div = mousemove
+Quando clico na div e seguro = mousedown
+Quando clico seguro e solto = mouseup
+Quando eu clico rapidamente na div = click 
+Quando eu clico e saio da div = mouseout
+ontimeupdate = atualiza��o em tempo real do evento (v�deo)
+=============================================================
+Para acessar uma tag com atributo proprio mas com um id definido, basta usar DOCUMENT.QUERYSELECTOR(`[ATRIBUTO=$ {id}]`
+=======
+Seletores:
+div p {
+    Pega todos as tag p dentro da div.
+} 
+
+div + p {
+    adjacente sibling
+    pega a tag p que está colada a div
+}
+
+div > p {
+    pega todos os filhos direto daquela div
+    nesse caso a tag (p)
+    Obs: as mudanças não alteram o pai, apenas os filhos >
+}
+
+div ~ p {
+    pega os elementos filhos (P) dentro do mesmo pai, só que não estão o
+}
+
+*{
+    seleciona todas as tags.
+}
+
+[nome do attr]{
+    alteração apenas em tags com esse attr
+}
+caso o attr tenha algum valor.
+
+[nome do attr='house']{
+    apenas nesse attr que tenha esse valor 
+    obs: se colocar * antes do =, ele vai pegar todos que tenham esse valor
+    por exemplo, attr*='sa' <--- pega todas as tags desse attr com este valor.
+}
+
+section > :nth-child(odd){
+    pega todos os filhos impar, se trocar o odd por even pega todos os pares.
+}
+
+section > span:nth-of-type(2){
+    mesmo que a section tenha varios filhos, com essa função
+    será retornado apenas o segundo span.. a contagem é apenas entre eles 
+}

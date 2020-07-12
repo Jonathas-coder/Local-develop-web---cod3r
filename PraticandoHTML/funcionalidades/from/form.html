@@ -1,0 +1,61 @@
+<h1>Formulário</h1>
+<hr>
+<form method='POST'>
+    <div>
+        <input type="hidden" name="id" value="1">
+        <input type="text" name="nome" >
+        <input type='password' name="senha">
+    </div>
+    <select>
+        <option value="py">Python</option>
+        <option value='js'>JavaScript</option>
+    </select>
+    <div>
+        <button formaction='http://localhost:3005/users'>Incluir </button>
+    </div>
+    <div>
+        <input type="radio" name="admin" >Admin
+        <input type='radio' name='Layer'>Layer
+    </div>
+</form>
+
+<style>
+    input{
+        display: block;
+    }
+    input[type=radio]{
+        display: inline-block;
+    }
+</style>
+
+<hr>
+<br>
+
+
+<table>
+    <tr>
+        <thead>
+            <th>Programas</th>
+            <th>Salário</th>
+        </thead>
+    </tr>
+    <tr>
+        <tbody>
+            <tr><td>JavaScript</td> <td>7.800</td></tr>
+            <td>Python</td>
+            <td>4555.00</td>
+        </tbody>
+    </tr>
+    <tfoot>
+        <tr>
+            <td colspan='1'>
+                total
+            </td>
+            <td>15.0000</td>
+        </tr>
+    </tfoot>
+</table>
+
+<p>
+    Aqui vemos eu tentando integarar tudo que aprendi no curso sobre HTML... Até que está legalzinho!
+</p>

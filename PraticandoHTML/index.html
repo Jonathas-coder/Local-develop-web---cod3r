@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILOSOFIA 2.0</title>
+</head>
+<body>
+    <header>
+        <h1>Transcendendo</h1>
+        <hr>
+        
+        <link rel="stylesheet" href="style.css">
+    </header>
+
+    <nav>
+        <a href="funcionalidades/texto1.html" class='text1'>The Hell</a>
+        <a href="funcionalidades/texto2.html" class="text2">Paradise</a>
+        <a href="funcionalidades/from/form.html " class="text3">Formulário</a>
+    </nav>
+
+    <div class="mensagem">
+        <p class="saudacao">Welcom to my first page.. Oh yeah buddy. Enjoy the trash. <br>
+         </p>
+    </div>
+
+    <section id='conteudo'></section>
+
+    <script>
+        document.querySelectorAll('a').forEach(links =>{
+            const conted = document.getElementsByid('conteudo')
+            links.onclick = function (e){
+                e.preventDefault()
+                fetch(links.href)
+                .then(link => link.text())
+                .then(html => conted.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

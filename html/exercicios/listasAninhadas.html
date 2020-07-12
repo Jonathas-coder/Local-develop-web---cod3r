@@ -1,0 +1,48 @@
+<h1>Projeto</h1>
+<ul class="tree ">
+    <li>
+        <span wm-folder>backend</span>
+        <ul>
+            <li>
+              <span wm-folder>app </span>  
+                <ul>
+                    <li>Java.js</li>
+                    <li>Android.js</li>
+                    <li>kotlin.js</li>
+                </ul>
+            </li>
+        <li>
+          <span> config</span>  
+            <ul>
+                <li>rota.js</li>
+                <li>server.js</li>
+                <li>banco.js</li>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li>
+        <span wm-folder> FrontEnd </span>
+    <ul>
+        <li> <span wm-folder> public </span>
+        <ul>
+            <li>html.html</li>
+            <li>banner</li>
+            <li>aquivoBravo.py</li>
+        </ul>
+    </li>
+    </ul>
+</li>
+</ul>
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+   document.querySelectorAll('[wm-folder]').forEach(p =>{
+       p.onclick = function (e){
+           const ul = p.nextElementSibling
+           const d = ul.style.display
+           ul.style.display = d === 'none' ? 'block' :'none'
+        
+        }
+   })
+    
+</script>

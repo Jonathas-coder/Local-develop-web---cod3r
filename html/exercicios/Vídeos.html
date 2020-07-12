@@ -1,0 +1,51 @@
+<video class='meuvideo' height="450" width="800" controlsList='nodownload' ontimeupdate="timer(this)"
+>
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta a tag video.
+</video>
+<div id="bar" class="progresso">
+    <div class="Barra"> </div>
+</div>
+
+
+<button onclick='Tocar()' type="button">Play</button>
+<button onclick='Parar()' type="button">Pause</button>
+<button type="button" onclick='Alerta()'>GetTime</button>
+<style>
+    .progresso {
+        width: 500px;
+        height: 10px;
+        border: solid 1px #444;
+    }
+
+    .progresso>div {
+        background-color: red;
+        color: white;
+        height: 100%;
+        text-align: right;
+        width: 0%;
+
+    }
+</style>
+
+<script>
+    let vid = document.querySelector('.meuvideo')
+    function Tocar() {
+        vid.play()
+    }
+    function Parar() {
+        vid.pause()
+    }
+    let barra = document.querySelector('.Barra')
+    function timer (event){
+        let atual = event.currentTime
+        let duraçao = event.duration
+        barra.style.width = (atual *100) / duraçao + '%'
+        barra.innerHTML = `${((atual *100) / duraçao ).toFixed(1)}%`
+        vid.oncontextmenu= () => false
+    }
+    //document.querySelector(`[atttr${id}]`) Pega uma tag com atributo proprio mas com um id mãe.
+    //pauseButton.onclick = () => myVideo.pause();  pega a variavel com o butto e passa a função pelo js mesmo.
+
+    //Lembre-se sempre que é melhor passar o evento pelo JS
+</script>

@@ -1,0 +1,3 @@
+Já lança no terminal: npm init -y <<--- vai criar o arquivo.packagejson
+
+depois é só lançar a braba com as dependecias: npm i --save express body-parser -E

@@ -1,0 +1,4 @@
+se eu chamar o objeto e logo em seguida passar um valor entre chaves [ ]
+O NOME DA KEY SERÁ ALTERADO.
+
+''Uma função que mostre todos os valores de um objeto'' function Show () {return Object.values(obj)}

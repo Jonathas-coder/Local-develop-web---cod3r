@@ -1,0 +1,61 @@
+<div class='goth'  >GOTH ANGEL SINNER</div>
+<hr>
+
+    <input type="number" name="numero1" id="n1">
+    <input type="number" name="numero2" id="n2">
+    <button onclick = some()>Somar</button>
+
+<div class='exibir'>Resultado</div>
+<hr>
+<p>Qual o seu país de origem?</p>
+<input type="text" name="pais" id="pais" class="text1">
+<button onclick="origem()">Enviar</button>
+<div class="res"></div>
+<style>
+
+</style>
+<script>
+    
+    
+    let ss = window.document.querySelector('div.goth')
+    ss.onclick = (e) => clicar()
+    ss.addEventListener('mouseenter',entrou)
+    ss.addEventListener('mouseout',saiu)
+    function clicar (){
+        ss.innerText = 'EVENT OCORRING'
+    }
+    function entrou(){
+        ss.innerText = 'Entrou'
+        ss.style.color = 'blue'
+    }
+    function saiu (){
+        ss.innerText = 'Saiu'
+        ss.style.color = 'red'
+    }
+    
+
+    const n1 = document.querySelector(' input#n1')
+    const n2 = document.querySelector('input#n2')
+    function some (){
+        var nu1 =Number(n1.value)
+        var nu2 =Number (n2.value)
+        
+        let show = document.querySelector('.exibir')
+        show.innerText = nu1 + nu2
+    }
+
+   
+    function origem (){
+        let valor = document.querySelector('.text1').value
+        let rest = document.querySelector('.res')
+        if (valor == 'BR'){
+            rest.innerHTML += '<p>Olá meu conterranêo, você é brasileiro !</p>'
+        }
+        else if (valor == 'USA'){
+            rest.innerHTML = '<p> wassa up how u going ? You are american guy ! </p>'
+        }
+    }
+
+
+
+</script>

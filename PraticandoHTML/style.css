@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: slategrey;
+    margin: 0 auto;
+}
+nav{
+    padding-left: 12px;
+    
+    font-size: 18px;
+    background-color:white ;
+    
+    display: inline-block;
+    width: 1366px;
+    margin-left: 0;
+    border-radius: 3px;
+   
+}
+.text1{
+    margin-left: 250px;
+    text-transform: none;
+    color: darkred;
+    text-decoration: none;
+    font-size: 30px;
+}
+.text2 ,.text3{
+    margin-left: 40px;
+    color: darkred;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 30px;
+}
+nav:hover{
+    background-color: silver;
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 0 ;
+    padding: 40px ;
+    display: block;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+h1:hover{
+    background-color: darkred;
+}
+
+hr{
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.mensagem{
+    background-color: white;
+    border-radius: 20px;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    font: italic ;
+    font-size: 20px;
+    
+}
+
+.saudacao{
+    margin-top: 70px;
+}

@@ -1,0 +1,15 @@
+HTTP - PROTOCOLO DE TRANSFERENCIA DE HIPER TEXTOS.
+
+SERVER SIDE - Aplicação que do lado backend que gera dados a partir de uma linguagem;
+CLIENT SERVER - Aplicação front end que consome dados e exibe os dados HTML gerados pelo server side;
+
+CONTEUDO ESTÁTICO - Arquivos do server side é servido ao client side e não pode ser alterados pelo client, apenas no código fonte;
+CONTEUDO DINAMICO - Alterações que podem ser feitas a partir dos arquivos server side, NO CLIENT SIDE...
+Por exemplo: No server eu gero arquivos HTML com python, e o client pode alterar esse arquivo com JS no client, sem necessariamente tocar
+no codigo fonte.
+
+
+Servidor DNS - Busca recursiva, tentará encontrar o server responsavel por aquela requisição chamando todos os servers dns do mundo para entregar o IP
+
+Server DNS - Busca iterativa, buscará o responsavel de forma mais centrada. requisições no brasil direcionada pra o EUA é preciso chamar o server
+DNS DE LÁ.

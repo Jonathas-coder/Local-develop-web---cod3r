@@ -1,0 +1,6 @@
+o __proto__  Alpha do  Object.protype tem o mesmo __proto__ dos Betas, toma cuidado.
+se for fazer um objeto com Object.protype, é melhor usar um 'beta = Object.create(alpha)'
+agora se for uma Function.prototype é suave usar o __proto__, eles apotam pra objetos diferentes.
+mesmo que seja da mesma linhagem do alpha, cada beta tem seu __proto__, então pode alterar de boa.
+
+*O Object.setPrototypeOf(Beta, Alpha) envia todas os attr, mas o Alpha fica vulneravel aos betas.
